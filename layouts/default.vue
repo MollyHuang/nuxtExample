@@ -8,6 +8,10 @@
 
 <script>
 export default {
-  name: 'DefaultLayout'
+  name: 'DefaultLayout',
+  middleware ({ store, route, redirect, params, query, req, res }) {
+    // eslint-disable-next-line no-console
+    console.log('Layout middleware')
+  }
 }
 </script>
