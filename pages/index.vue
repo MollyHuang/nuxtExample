@@ -35,5 +35,13 @@ export default {
       data: res.data.results
     }
   }
+  // asyncData({ $axios }, callback) {
+  //   $axios.get('...').then((res) => {
+  //     callback(null,
+  //     {
+  //       data: res.data
+  //     });
+  //   })
+  // },
 }
 </script>
