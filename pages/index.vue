@@ -8,6 +8,10 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  nuxtServerInit (store, content) {
+    // eslint-disable-next-line no-console
+    console.log('nuxtServerInit')
+  }
 }
 </script>
