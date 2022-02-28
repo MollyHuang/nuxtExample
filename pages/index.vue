@@ -3,6 +3,11 @@
     <p>
       這是一段話 Body
     </p>
+    <ul>
+      <li v-for="item in data" :key="item.email">
+        {{ item.email }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -23,6 +28,12 @@ export default {
     // eslint-disable-next-line no-console
     console.log('validate')
     return true
+  },
+  async asyncData ({ $axios }) {
+    const res = await $axios.get('https://randomuser.me/api/')
+    return {
+      data: res.data.results
+    }
   }
 }
 </script>
