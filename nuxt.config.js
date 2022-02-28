@@ -25,7 +25,9 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  // 到 nuxt.config.js 中將 components 改成 false，因為在 2.12~2.13 左右引入了自動 import 元件的功能，
+  // 但是自動這種東西基本上很容易踩雷，所以會建議關閉不使用，當然你也可以 詳閱該連結 了解該功能的用處。
+  components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
